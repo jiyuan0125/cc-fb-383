@@ -1,0 +1,217 @@
+[
+  {
+    "作业号": "J01",
+    "名称": "温度接入",
+    "reads": [
+      "dev_temp"
+    ],
+    "writes": [
+      "temp_raw"
+    ]
+  },
+  {
+    "作业号": "J02",
+    "名称": "湿度接入",
+    "reads": [
+      "dev_hum"
+    ],
+    "writes": [
+      "hum_raw"
+    ]
+  },
+  {
+    "作业号": "J03",
+    "名称": "气压接入",
+    "reads": [
+      "dev_pres"
+    ],
+    "writes": [
+      "pres_raw"
+    ]
+  },
+  {
+    "作业号": "J04",
+    "名称": "电量接入",
+    "reads": [
+      "dev_pwr"
+    ],
+    "writes": [
+      "pwr_raw"
+    ]
+  },
+  {
+    "作业号": "J05",
+    "名称": "流量接入",
+    "reads": [
+      "dev_flow"
+    ],
+    "writes": [
+      "flow_raw"
+    ]
+  },
+  {
+    "作业号": "J06",
+    "名称": "温度清洗",
+    "reads": [],
+    "writes": [
+      "temp_clean"
+    ]
+  },
+  {
+    "作业号": "J07",
+    "名称": "湿度清洗",
+    "reads": [
+      "hum_raw"
+    ],
+    "writes": [
+      "hum_clean"
+    ]
+  },
+  {
+    "作业号": "J08",
+    "名称": "气压清洗",
+    "reads": [],
+    "writes": [
+      "pres_clean"
+    ]
+  },
+  {
+    "作业号": "J09",
+    "名称": "流量清洗",
+    "reads": [],
+    "writes": [
+      "flow_clean"
+    ]
+  },
+  {
+    "作业号": "J10",
+    "名称": "电量清洗",
+    "reads": [],
+    "writes": [
+      "pwr_clean"
+    ]
+  },
+  {
+    "作业号": "J11",
+    "名称": "温度聚合",
+    "reads": [
+      "temp_clean"
+    ],
+    "writes": [
+      "temp_hour"
+    ]
+  },
+  {
+    "作业号": "J12",
+    "名称": "气压聚合",
+    "reads": [
+      "pres_clean"
+    ],
+    "writes": [
+      "pres_hour"
+    ]
+  },
+  {
+    "作业号": "J13",
+    "名称": "流量聚合",
+    "reads": [
+      "flow_clean"
+    ],
+    "writes": [
+      "flow_hour"
+    ]
+  },
+  {
+    "作业号": "J14",
+    "名称": "综合日报",
+    "reads": [
+      "temp_hour",
+      "hum_clean"
+    ],
+    "writes": [
+      "mix_daily"
+    ]
+  },
+  {
+    "作业号": "J15",
+    "名称": "质量校验",
+    "reads": [],
+    "writes": [
+      "qc_flag"
+    ]
+  },
+  {
+    "作业号": "J16",
+    "名称": "报表导出",
+    "reads": [
+      "mix_daily",
+      "qc_flag"
+    ],
+    "writes": [
+      "rpt_export"
+    ]
+  },
+  {
+    "作业号": "J17",
+    "名称": "设备心跳",
+    "reads": [],
+    "writes": [
+      "heartbeat"
+    ]
+  },
+  {
+    "作业号": "J18",
+    "名称": "温度回补",
+    "reads": [
+      "temp_fix"
+    ],
+    "writes": [
+      "temp_back",
+      "temp_audit"
+    ]
+  },
+  {
+    "作业号": "J19",
+    "名称": "温度修正",
+    "reads": [
+      "temp_back"
+    ],
+    "writes": [
+      "temp_fix",
+      "temp_note"
+    ]
+  },
+  {
+    "作业号": "J20",
+    "名称": "告警生成",
+    "reads": [
+      "alarm_seed"
+    ],
+    "writes": [
+      "alarm_act",
+      "alarm_log"
+    ]
+  },
+  {
+    "作业号": "J21",
+    "名称": "告警核查",
+    "reads": [
+      "alarm_act"
+    ],
+    "writes": [
+      "alarm_chk",
+      "alarm_note"
+    ]
+  },
+  {
+    "作业号": "J22",
+    "名称": "告警归整",
+    "reads": [
+      "alarm_chk"
+    ],
+    "writes": [
+      "alarm_seed",
+      "alarm_sum"
+    ]
+  }
+]
