@@ -1,0 +1,6 @@
+﻿异常类型,对象,涉及表/作业,说明
+环,J18->J19->J18,temp_back;temp_fix,作业间互相读写形成环
+环,J20->J21->J22->J20,alarm_act;alarm_chk;alarm_seed,作业间互相读写形成环
+未登记表,backup_temp,读表作业:J11,日志分表样例:backup_temp_20261002
+未登记表,manual_pres,读表作业:J12,日志分表样例:manual_pres_20261004
+未登记表,old_hum,读表作业:J07,日志分表样例:old_hum_20260930
